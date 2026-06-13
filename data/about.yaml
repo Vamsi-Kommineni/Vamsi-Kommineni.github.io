@@ -1,0 +1,32 @@
+# About / landing page content.
+eyebrow: About
+heading: GenAI engineer and researcher
+sub: Generative AI, knowledge graphs, computer vision, and medical AI.
+
+# Short bio (markdown allowed: **bold**, *italics*, [links](url)).
+bio:
+  - >-
+    I am a computer-science PhD researcher at the **Heinz Nixdorf Chair for
+    Distributed Information Systems** (Friedrich-Schiller-Universität Jena). Most
+    recently I was **Founding AI Lead at Nixi AI**, an EXIST-funded medical AI
+    startup, where I built the AI engineering stack from the ground up. I work
+    across the full path from data to deployment.
+  - >-
+    My research turns unstructured text and images into structured, reliable
+    knowledge, using large language models and retrieval-augmented generation,
+    knowledge graph and ontology construction, and computer vision.
+
+# Highlight chips (label is emphasised in the accent colour).
+highlights:
+  - { label: "7+ years",      note: "in ML / DL / GenAI" }
+  - { label: "Production",    note: "GenAI + clinical AI" }
+  - { label: "Peer-reviewed", note: "in PeerJ CS" }
+
+# Knowledge-graph motif: central node = initials, surrounded by focus areas.
+kg_core: VK
+kg_nodes:
+  - LLMs & RAG
+  - Knowledge Graphs
+  - Computer Vision
+  - Clinical AI
+  - Reproducible ML

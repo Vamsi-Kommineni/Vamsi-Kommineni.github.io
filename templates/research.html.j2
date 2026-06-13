@@ -1,0 +1,18 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="view">
+  <span class="eyebrow">{{ research.eyebrow }}</span>
+  <h1 class="page-title">{{ research.heading }}</h1>
+  <p class="sub">{{ research.sub }}</p>
+
+  <div class="cards">
+    {%- for a in research.areas %}
+    <article class="card">
+      <span class="n">{{ '%02d' % loop.index }}</span>
+      <h2>{{ a.title }}</h2>
+      <p>{{ a.body }}</p>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+{% endblock %}

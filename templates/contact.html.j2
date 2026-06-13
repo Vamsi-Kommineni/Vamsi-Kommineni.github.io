@@ -1,0 +1,30 @@
+{% extends "base.html.j2" %}
+{% from "partials/icons.html.j2" import icon %}
+{% block content %}
+<section class="view">
+  <span class="eyebrow">{{ contact.eyebrow }}</span>
+  <h1 class="page-title">{{ contact.heading }}</h1>
+  <p class="sub">{{ contact.sub }}</p>
+
+  <div class="prose"><p>{{ contact.note }}</p></div>
+
+  <div class="contact-cards">
+    <a class="ccard" href="mailto:{{ site.email }}">
+      <span class="cicon">{{ icon('email') }}</span>
+      <span class="ctext"><span class="ck">Email</span><span class="cval">{{ site.email }}</span></span>
+    </a>
+    <a class="ccard" href="{{ site.linkedin }}" target="_blank" rel="me noopener">
+      <span class="cicon">{{ icon('linkedin') }}</span>
+      <span class="ctext"><span class="ck">LinkedIn</span><span class="cval">in/vkk99</span></span>
+    </a>
+    <a class="ccard" href="{{ site.github }}" target="_blank" rel="me noopener">
+      <span class="cicon">{{ icon('github') }}</span>
+      <span class="ctext"><span class="ck">GitHub</span><span class="cval">Vamsi-Kommineni</span></span>
+    </a>
+    <a class="ccard" href="{{ site.scholar }}" target="_blank" rel="me noopener">
+      <span class="cicon">{{ icon('scholar') }}</span>
+      <span class="ctext"><span class="ck">Google Scholar</span><span class="cval">Publications</span></span>
+    </a>
+  </div>
+</section>
+{% endblock %}

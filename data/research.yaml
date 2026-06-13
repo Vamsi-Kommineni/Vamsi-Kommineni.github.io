@@ -1,0 +1,30 @@
+# Research focus areas (rendered as numbered cards). Order = display order.
+eyebrow: Research
+heading: What I work on
+sub: Turning unstructured text and images into structured knowledge, and shipping it.
+
+areas:
+  - title: Generative AI & LLMs
+    body: >-
+      Retrieval-augmented generation, agentic multi-step workflows, LLM fine-tuning,
+      and prompt engineering, built into deployable systems on Google Cloud and Azure.
+  - title: Knowledge Graphs & NLP
+    body: >-
+      LLM-supported construction of knowledge graphs and ontologies from unstructured
+      text, and information retrieval across large scientific literature.
+  - title: Computer Vision & Multimodal
+    body: >-
+      Image classification, object detection, and instance segmentation, plus
+      vision-language models that read images from natural-language prompts.
+  - title: Medical & Clinical AI
+    body: >-
+      German medical speech-to-text, ICD-10-GM coding, clinical-evidence RAG, and
+      GDPR-aware anonymization of patient documentation.
+  - title: Reproducible ML
+    body: >-
+      Evaluating and improving the reproducibility of deep-learning methods, with
+      data versioning and lineage for trustworthy experiments.
+  - title: AI for Science
+    body: >-
+      Applying these methods at scale to real scientific data, with biodiversity
+      informatics as the primary application domain.

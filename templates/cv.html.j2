@@ -1,0 +1,49 @@
+{% extends "base.html.j2" %}
+{% from "partials/icons.html.j2" import icon %}
+{% block content %}
+<section class="view">
+  <div class="cv-top">
+    <div>
+      <span class="eyebrow">Curriculum Vitae</span>
+      <h1 class="page-title">Experience &amp; skills</h1>
+    </div>
+    <a class="btn" href="{{ url(site.cv_pdf) }}" download>{{ icon('download') }}<span>Download PDF</span></a>
+  </div>
+  <p class="sub">GenAI and applied-AI engineer with 7+ years building and deploying machine-learning, deep-learning, and generative-AI systems end-to-end.</p>
+
+  <h2 class="block-h">Experience</h2>
+  <ol class="tl">
+    {%- for e in experience %}
+    <li>
+      <div class="when">{{ e.when }}</div>
+      <div class="role">{{ e.role }}</div>
+      <p class="org">{{ e.org }}{% if e.org_note %} · {{ e.org_note }}{% endif %}{% if e.location %} · {{ e.location }}{% endif %}</p>
+      {%- if e.summary %}<p class="summary">{{ e.summary }}</p>{% endif %}
+      {%- if e.bullets %}
+      <ul class="bul">
+        {%- for b in e.bullets %}<li>{{ b }}</li>{% endfor %}
+      </ul>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+
+  <h2 class="block-h">Education</h2>
+  <div class="twocol">
+    {%- for ed in education %}
+    <div class="ed">
+      <p class="deg">{{ ed.degree }}</p>
+      <p class="det">{{ ed.org }} · {{ ed.when }}{% if ed.detail %}<br>{{ ed.detail }}{% endif %}</p>
+      {%- if ed.thesis %}<p class="thesis"><span class="t-label">Thesis</span> <em>{{ ed.thesis }}</em></p>{% endif %}
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h2 class="block-h">Skills &amp; languages</h2>
+  <ul class="skills">
+    {%- for s in skills %}
+    <li><span class="k">{{ s.group }}:</span> {{ s['items'] }}</li>
+    {%- endfor %}
+  </ul>
+</section>
+{% endblock %}

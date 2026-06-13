@@ -1,0 +1,39 @@
+{%- from "partials/icons.html.j2" import icon -%}
+<aside class="sidebar" id="sidebar" aria-label="Site navigation">
+  <a class="avatar" href="{{ url('/') }}" aria-label="{{ site.name }}, home">
+    <img src="{{ url('/assets/img/me.jpg') }}" width="150" height="150"
+         alt="Portrait of {{ site.name }}" decoding="async">
+    <span class="avatar-ring" aria-hidden="true"></span>
+  </a>
+
+  <div class="id">
+    <p class="id-name">{{ site.name }}</p>
+    <p class="role">{{ site.role }}</p>
+    <p class="meta">{{ site.title_line }}</p>
+    <p class="meta">{{ site.affiliation }}</p>
+    <p class="meta meta-loc">{{ icon('pin') }} {{ site.location }}</p>
+  </div>
+
+  <nav class="socials" aria-label="Profiles and contact">
+    {%- for s in site.socials %}
+    <a href="{{ s.href }}" title="{{ s.label }}" aria-label="{{ s.label }}"
+       {% if s.key != 'email' %}target="_blank" rel="me noopener"{% endif %}>{{ icon(s.key) }}</a>
+    {%- endfor %}
+  </nav>
+
+  <div class="rule" role="presentation"></div>
+
+  <nav class="menu" aria-label="Sections">
+    {%- for item in site.nav %}
+    <a href="{{ url(item.url) }}" {% if item.icon == page.nav %}class="active" aria-current="page"{% endif %}>{{ icon(item.icon) }}<span>{{ item.label }}</span></a>
+    {%- endfor %}
+  </nav>
+
+  <div class="side-foot">
+    <span>© {{ year }} V. Kommineni</span>
+    <button class="toggle" id="theme-toggle" type="button" aria-label="Toggle light / dark theme">
+      <span class="moon">{{ icon('moon') }}</span>
+      <span class="sun">{{ icon('sun') }}</span>
+    </button>
+  </div>
+</aside>

@@ -1,0 +1,21 @@
+{%- from "partials/icons.html.j2" import icon -%}
+{%- macro pub_item(item, me) -%}
+<li class="pub" data-type="{{ item.type }}" data-year="{{ item.year }}"
+    data-search="{{ (item.title ~ ' ' ~ item.authors ~ ' ' ~ item.venue) | lower | e }}">
+  <div class="venue">{{ item.venue }} · {{ item.year }}{% if item.meta %} <span class="vmeta">· {{ item.meta }}</span>{% endif %}</div>
+  {% if item.url %}<a class="t" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>{% else %}<span class="t">{{ item.title }}</span>{% endif %}
+  <div class="au">{{ item.authors | highlight_me(me) }}</div>
+  {% if item.url or item.bibtex %}
+  <div class="pub-actions">
+    {% if item.url %}<a class="pub-link" href="{{ item.url }}" target="_blank" rel="noopener">{{ icon('external') }}<span>{{ item.url | linklabel }}</span></a>{% endif %}
+    {% if item.bibtex %}<button class="cite-btn" type="button" aria-expanded="false" aria-controls="bib-{{ item.id }}">{{ icon('copy') }}<span>Cite</span></button>{% endif %}
+  </div>
+  {% endif %}
+  {% if item.bibtex %}
+  <div class="bibwrap" id="bib-{{ item.id }}" hidden>
+    <pre class="bibtex" tabindex="0">{{ item.bibtex | e }}</pre>
+    <button class="copy-bib" type="button" data-bib="bib-{{ item.id }}">{{ icon('copy') }}<span class="copy-label">Copy BibTeX</span></button>
+  </div>
+  {% endif %}
+</li>
+{%- endmacro -%}

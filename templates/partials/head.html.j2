@@ -1,0 +1,55 @@
+{#- <head> contents. Expects: site, page, person_jsonld, articles_jsonld (opt) -#}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title_full }}</title>
+<meta name="description" content="{{ page.desc }}">
+<meta name="author" content="{{ site.name }}">
+<meta name="keywords" content="{{ site.keywords | join(', ') }}">
+{% if page.noindex %}<meta name="robots" content="noindex, follow">
+{% else %}<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="{{ abs_url(page.url) }}">
+{% endif %}
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3f5f9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1626" media="(prefers-color-scheme: dark)">
+
+{# ---- Open Graph ---- #}
+<meta property="og:type" content="{{ page.og_type | default('website') }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ page.title_full }}">
+<meta property="og:description" content="{{ page.desc }}">
+<meta property="og:url" content="{{ abs_url(page.url) }}">
+<meta property="og:image" content="{{ abs_url(site.og_image) }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.name }}, {{ site.role }}">
+<meta property="og:locale" content="en_US">
+
+{# ---- Twitter ---- #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title_full }}">
+<meta name="twitter:description" content="{{ page.desc }}">
+<meta name="twitter:image" content="{{ abs_url(site.og_image) }}">
+<meta name="twitter:image:alt" content="{{ site.name }}, {{ site.role }}">
+
+{# ---- Icons & manifest ---- #}
+<link rel="icon" href="{{ url('/assets/img/favicon.ico') }}" sizes="any">
+<link rel="icon" type="image/svg+xml" href="{{ url('/assets/img/favicon.svg') }}">
+<link rel="apple-touch-icon" href="{{ url('/assets/img/icon-180.png') }}">
+<link rel="manifest" href="{{ url('/site.webmanifest') }}">
+
+{# ---- Fonts: preload the two most critical, then the stylesheet ---- #}
+<link rel="preload" href="{{ url('/assets/fonts/space-grotesk-600.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ url('/assets/fonts/ibm-plex-sans-400.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ url('/assets/css/fonts.css') }}">
+<link rel="stylesheet" href="{{ url('/assets/css/styles.css') }}">
+
+{# ---- Set theme before paint (OS preference, then saved choice) ---- #}
+<script>
+  (function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.dataset.theme='dark';else document.documentElement.dataset.theme='light';}catch(e){}})();
+</script>
+
+{# ---- Structured data ---- #}
+<script type="application/ld+json">{{ person_jsonld | safe }}</script>
+{% if articles_jsonld %}<script type="application/ld+json">{{ articles_jsonld | safe }}</script>{% endif %}
+{% if projects_jsonld %}<script type="application/ld+json">{{ projects_jsonld | safe }}</script>{% endif %}

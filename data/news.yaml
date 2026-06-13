@@ -1,0 +1,31 @@
+# "News / currently" list on the About page. Newest first. Markdown allowed.
+# Set upcoming: true to tag an item as planned/upcoming.
+- date: "2026"
+  upcoming: true
+  text: "PhD thesis defence expected."
+- date: "2026"
+  text: "Concluded my Founding AI Lead role at **Nixi AI**."
+- date: "2025"
+  text: >-
+    Joined **Nixi AI** as Founding AI Lead, building the medical-AI engineering stack
+    from the ground up (clinical RAG, German medical ASR, ICD-10-GM coding, agentic workflows).
+- date: "2025"
+  text: >-
+    Two papers published in *PeerJ Computer Science*: a multi-LLM information-retrieval
+    pipeline, and an evaluation of deep-learning method reproducibility in biodiversity research.
+- date: "2025"
+  text: "Took part in **EcoHack**, the AI & LLM hackathon for evidence-based ecological research."
+- date: "2024"
+  text: "Paper at **SEMANTiCS (NLP4KGC)** on automating knowledge-graph construction with LLMs."
+- date: "2023"
+  text: >-
+    Co-organised the "AI for collection images" session at **GfÖ**, and presented the
+    CLIP-model study at **TDWG/BISS**.
+- date: "2022"
+  text: >-
+    Co-organised session SYM12, "Information extraction from digital specimen images using
+    Artificial Intelligence," at **TDWG 2022**.
+- date: "2021"
+  text: >-
+    First-author dataset paper in *Biodiversity Data Journal*: leaf-size traits from
+    digitised herbarium specimens.

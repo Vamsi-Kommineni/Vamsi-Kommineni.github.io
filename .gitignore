@@ -1,0 +1,15 @@
+# Build output (CI rebuilds and deploys this)
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Image-generation TTFs (only needed to re-run gen_assets.py; see README)
+build_fonts_ttf/
+
+# OS
+.DS_Store
+Thumbs.db

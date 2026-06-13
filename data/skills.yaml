@@ -1,0 +1,13 @@
+# Skill groups for the CV page.
+- group: Generative AI & LLMs
+  items: RAG, AI agents (LangChain, LangGraph), LLM fine-tuning, prompt engineering, vector databases (Qdrant, FAISS, Azure AI Search)
+- group: Machine Learning & Deep Learning
+  items: Computer vision (classification, detection, segmentation), NLP, multimodal / vision-language models, classical ML (Decision Tree, Random Forest, XGBoost)
+- group: Medical & Clinical AI
+  items: German clinical NLP, German medical ASR fine-tuning, ICD-10-GM coding, GDPR-aware anonymization
+- group: Cloud & MLOps
+  items: Google Cloud (Vertex AI), Microsoft Azure (Azure AI), AWS, CI/CD, HPC / GPU clusters, containerized deployment
+- group: Programming & Frameworks
+  items: Python (PyTorch, TensorFlow, Keras, scikit-learn, NumPy, pandas), LangChain, LangGraph, MATLAB
+- group: Languages
+  items: English (business fluent); German (B1 certified, telc; B2 in progress); Telugu (native)

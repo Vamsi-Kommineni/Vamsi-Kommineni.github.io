@@ -1,0 +1,16 @@
+# Education (newest first).
+- degree: PhD, Computer Science
+  org: Friedrich-Schiller-Universität Jena
+  when: "Nov 2020 – present (expected 2026)"
+  detail: >-
+    Heinz Nixdorf Chair for Distributed Information Systems · advisor Prof. Dr. Birgitta König-Ries.
+  thesis: >-
+    A Quality-Aware, Provenance-Complete, Interoperable Multimodal Knowledge Graph
+    for Digital Herbaria Images
+
+- degree: M.Sc., Scientific Instrumentation
+  org: University of Applied Sciences Jena (EAH Jena)
+  when: "Oct 2016 – Jul 2020"
+  detail: ""
+  thesis: >-
+    Evaluating global patterns of leaf area using machine-learning approaches

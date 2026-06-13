@@ -1,0 +1,30 @@
+{% extends "base.html.j2" %}
+{% from "partials/icons.html.j2" import icon %}
+{% block content %}
+<section class="view">
+  <span class="eyebrow">{{ projects.eyebrow }}</span>
+  <h1 class="page-title">{{ projects.heading }}</h1>
+  <p class="sub">{{ projects.sub }}</p>
+
+  <div class="projects">
+    {%- for p in projects['items'] %}
+    <article class="project">
+      <div class="project-head">
+        <h2>{{ p.name }}</h2>
+        <span class="project-role">{{ p.role }}</span>
+      </div>
+      <p>{{ p.description }}</p>
+      {%- if p.tags %}
+      <ul class="ptags">{% for t in p.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+      {%- endif %}
+      <div class="project-links">
+        <a href="{{ p.repo }}" target="_blank" rel="noopener">{{ icon('github') }}<span>Code</span></a>
+        {%- if p.paper %}
+        <a href="{{ p.paper }}" target="_blank" rel="noopener">{{ icon('external') }}<span>Paper</span></a>
+        {%- endif %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+{% endblock %}

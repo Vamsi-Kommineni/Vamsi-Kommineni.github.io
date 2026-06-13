@@ -1,0 +1,50 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="view">
+  <span class="eyebrow">{{ talks.eyebrow }}</span>
+  <h1 class="page-title">{{ talks.heading }}</h1>
+  <p class="sub">{{ talks.sub }}</p>
+
+  <h2 class="block-h">Organized sessions</h2>
+  <ul class="tlist">
+    {%- for o in talks.organized %}
+    <li><span class="yr">{{ o.tag }}</span><div><p>{{ o.text }}</p></div></li>
+    {%- endfor %}
+  </ul>
+
+  <h2 class="block-h">Conference presentations</h2>
+  <ul class="tlist">
+    {%- for p in talks.presentations %}
+    <li><span class="yr">{{ p.year }}</span><div><p>{{ p.title }}</p><p class="where">{{ p.where }}</p></div></li>
+    {%- endfor %}
+  </ul>
+
+  <h2 class="block-h">Poster presentations</h2>
+  <ul class="tlist">
+    {%- for p in talks.posters %}
+    <li><span class="yr">{{ p.year }}</span><div><p>{{ p.title }}</p><p class="where">{{ p.where }}</p></div></li>
+    {%- endfor %}
+  </ul>
+
+  <h2 class="block-h">Supervision</h2>
+  <ul class="tlist">
+    {%- for s in talks.supervision %}
+    <li><span class="yr">{{ s.level }}</span><div><p>{{ s.title }}</p><p class="where">Co-supervised · {{ s.student }}</p></div></li>
+    {%- endfor %}
+  </ul>
+
+  <h2 class="block-h">Peer review</h2>
+  <ul class="tlist">
+    {%- for r in talks.reviewing %}
+    <li><span class="yr">{{ r.years }}</span><div><p>{{ r.role }}, {{ r.venue }}</p><p class="where">{{ r.note }}</p></div></li>
+    {%- endfor %}
+  </ul>
+
+  <h2 class="block-h">Community</h2>
+  <ul class="tlist">
+    {%- for c in talks.community %}
+    <li><span class="yr">{{ c.year }}</span><div><p>{{ c.text }}</p></div></li>
+    {%- endfor %}
+  </ul>
+</section>
+{% endblock %}

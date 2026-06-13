@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{ site.lang }}" data-theme="light">
+<head>
+{% include "partials/head.html.j2" %}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+{%- from "partials/icons.html.j2" import icon -%}
+
+<header class="topbar">
+  <button class="burger" id="burger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">{{ icon('burger') }}</button>
+  <a class="tb-id" href="{{ url('/') }}">
+    <img class="tb-avatar" src="{{ url('/assets/img/me.jpg') }}" width="32" height="32" alt="" decoding="async">
+    <span class="tb-name">Vamsi <b>Kommineni</b></span>
+  </a>
+  <button class="toggle toggle-mobile" id="theme-toggle-m" type="button" aria-label="Toggle light / dark theme">
+    <span class="moon">{{ icon('moon') }}</span><span class="sun">{{ icon('sun') }}</span>
+  </button>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+
+{% include "partials/sidebar.html.j2" %}
+
+<main class="main" id="main">
+  <div class="page">
+    {% block content %}{% endblock %}
+  </div>
+  <footer class="page-foot">
+    <span>© {{ year }} {{ site.name }}</span>
+    <span class="dot">·</span>
+    <a href="{{ url('/') }}">Home</a>
+    <span class="dot">·</span>
+    <a href="{{ site.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+  </footer>
+</main>
+
+<script src="{{ url('/assets/js/main.js') }}" defer></script>
+</body>
+</html>

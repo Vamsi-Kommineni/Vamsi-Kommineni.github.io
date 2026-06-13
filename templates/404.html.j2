@@ -1,0 +1,10 @@
+{% extends "base.html.j2" %}
+{% from "partials/icons.html.j2" import icon %}
+{% block content %}
+<section class="view view-404">
+  <span class="eyebrow">Error 404</span>
+  <h1 class="page-title">Page not found</h1>
+  <p class="sub">The page you’re looking for doesn’t exist or has moved.</p>
+  <p><a class="btn" href="{{ url('/') }}">{{ icon('arrow') }}<span>Back to home</span></a></p>
+</section>
+{% endblock %}

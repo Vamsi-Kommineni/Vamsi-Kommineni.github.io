@@ -1,0 +1,44 @@
+# Projects page. `repo` and optional `paper` links; `tags` render as chips.
+eyebrow: Projects
+heading: Selected projects
+sub: A selection of open-source research code and applied AI systems.
+
+items:
+  - name: Inagecas
+    role: Personal project
+    description: >-
+      A production-ready AI customer-support platform that resolves tickets from a company's
+      internal documentation, with strict guardrails so every answer is grounded in source
+      documents (no hallucinations). It supports prompt-based image analysis (Meta's SAM 3
+      segmentation paired with a vision-language model) so customers can submit screenshots,
+      uses LLM routing to classify and direct queries, and automatically escalates anything
+      it cannot confidently answer to a human-agent queue.
+    repo: https://github.com/Vamsi-Kommineni/Inagecas
+    tags: [RAG, Guardrails, SAM 3, Vision-language, LLM routing]
+
+  - name: Automatic KG & ontology construction with LLMs
+    role: fusion-jena · research
+    description: >-
+      A pipeline that automatically constructs ontologies and knowledge graphs from text using
+      large language models, with a focus on reproducibility.
+    repo: https://github.com/fusion-jena/automatic-KG-creation-with-LLM
+    paper: https://arxiv.org/abs/2403.08345
+    tags: [Knowledge graphs, Ontology, LLMs]
+
+  - name: Multi-LLM information retrieval with RAG
+    role: fusion-jena · research
+    description: >-
+      An information-retrieval pipeline that ensembles multiple LLMs with retrieval-augmented
+      generation to extract deep-learning methodologies from biodiversity literature.
+    repo: https://github.com/fusion-jena/information-retrieval-using-multiple-LLM-and-RAG
+    paper: https://doi.org/10.7717/peerj-cs.3204
+    tags: [RAG, LLM ensemble, Information retrieval]
+
+  - name: Agentic competency-question generation
+    role: fusion-jena · research
+    description: >-
+      An agentic, retrieval-augmented pipeline that generates, validates, and consolidates
+      competency questions from scientific literature to support knowledge-graph and ontology
+      development.
+    repo: https://github.com/fusion-jena/Agentic-CQ-Generation
+    tags: [AI agents, RAG, Knowledge graphs]

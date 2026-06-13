@@ -1,0 +1,46 @@
+# CV experience timeline (newest first). Each role -> bullets.
+- when: "May 2025 – May 2026"
+  role: Founding AI Lead
+  org: Nixi AI
+  org_note: EXIST-funded medical AI startup
+  location: Wiesbaden / Remote
+  summary: Built the AI engineering stack from the ground up.
+  bullets:
+    - Architected and shipped production generative-AI systems on Google Cloud (Vertex AI) and Microsoft Azure AI.
+    - Designed retrieval-augmented generation (RAG) pipelines for clinical-evidence synthesis with vector databases (Qdrant, FAISS, Azure AI Search).
+    - Built German medical speech-to-text (ASR) fine-tuning pipelines, including synthetic-data generation for domain adaptation.
+    - Developed automated ICD-10-GM medical coding and GDPR-aware clinical-text anonymization for German patient documentation.
+    - Orchestrated agentic, multi-step LLM workflows (LangGraph, LangChain) for clinical decision-support and documentation.
+    - Devised AI product strategy and full-stack development; co-authored grant proposals, supported hiring, and supervised thesis students.
+
+- when: "Nov 2020 – Present"
+  role: AI Engineer / PhD Researcher
+  org: Friedrich-Schiller-Universität Jena
+  org_note: Heinz Nixdorf Chair for Distributed Information Systems
+  location: Jena, Germany
+  summary: >-
+    Funded contract Nov 2020 – Dec 2024; the PhD continues with the same research group thereafter.
+  bullets:
+    - Developed end-to-end deep-learning pipelines (image classification, object detection, instance segmentation) over a custom image dataset developed in-house.
+    - Designed a RAG-supported LLM pipeline to analyse and extract information from hundreds of research articles.
+    - Built a pipeline that automatically constructs knowledge graphs from unstructured text using LLMs.
+    - Integrated multimodal vision-language models to extract information from images using natural-language prompts.
+    - Co-taught part of the seminar "Enhancing Knowledge Graphs with AI Models" (2024); supervised Master's thesis students and annotation teams.
+    - Organised scientific sessions at TDWG and GfÖ; presented at SEMANTiCS, TDWG, and GfÖ.
+
+- when: "Apr 2019 – Sep 2020"
+  role: ML Engineer (Student Assistant) & M.Sc. Researcher
+  org: Max Planck Institute for Biogeochemistry
+  location: Jena, Germany
+  bullets:
+    - "Built an end-to-end ML project: data collection, annotation, model training, feature engineering, and evaluation."
+    - Developed regression models (Decision Tree, Random Forest, XGBoost) to predict 14,721 global leaf-area values.
+    - Ran annotation projects for image classification, object detection, and segmentation.
+
+- when: "Apr 2018 – Aug 2018"
+  role: Intern, Signal Processing
+  org: University of Applied Sciences Jena (EAH Jena)
+  location: Jena, Germany
+  bullets:
+    - Reconstructed noisy signals using compressed sensing and Fourier transforms across varying noise thresholds.
+    - Analysed reconstruction outcomes to assess signal integrity.

@@ -1,0 +1,50 @@
+{% extends "base.html.j2" %}
+{% from "partials/icons.html.j2" import icon %}
+{% from "partials/pub_item.html.j2" import pub_item %}
+{% block content %}
+<section class="view" id="pub-root">
+  <span class="eyebrow">{{ pubs.eyebrow }}</span>
+  <h1 class="page-title">{{ pubs.heading }}</h1>
+  <p class="sub">{{ pubs.sub }}</p>
+
+  <div class="pubtools">
+    <label class="search" for="pub-search">
+      {{ icon('research') }}
+      <input id="pub-search" type="search" placeholder="Search title, author, venue…" autocomplete="off" aria-label="Search publications">
+    </label>
+    <div class="filters" role="group" aria-label="Filter by type">
+      <button class="fbtn active" type="button" data-filter="all" aria-pressed="true">All</button>
+      {%- for t in pubs.types %}
+      <button class="fbtn" type="button" data-filter="{{ t.key }}" aria-pressed="false">{{ t.short }}</button>
+      {%- endfor %}
+    </div>
+    <label class="yearsel">
+      <span class="sr-only">Filter by year</span>
+      <select id="pub-year" aria-label="Filter by year">
+        <option value="all">All years</option>
+        {%- for y in years %}<option value="{{ y }}">{{ y }}</option>{% endfor %}
+      </select>
+    </label>
+  </div>
+
+  <p class="pub-count" id="pub-count" aria-live="polite"></p>
+
+  {%- for t in pubs.types %}
+  {%- set group_items = pubs['items'] | selectattr('type', 'equalto', t.key) | list %}
+  {%- if group_items %}
+  <section class="pubgroup-wrap" data-group="{{ t.key }}">
+    <h2 class="pubgroup">{{ t.label }}</h2>
+    <ul class="pubs">
+      {%- for item in group_items %}
+      {{ pub_item(item, pubs.me) }}
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endif %}
+  {%- endfor %}
+
+  <p class="no-results" id="no-results" hidden>No publications match your filters. <button type="button" class="linkbtn" id="clear-filters">Clear filters</button></p>
+
+  <p class="more"><a href="{{ site.scholar }}" target="_blank" rel="noopener">Full list on Google Scholar {{ icon('arrow') }}</a></p>
+</section>
+{% endblock %}

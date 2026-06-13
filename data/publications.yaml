@@ -1,0 +1,286 @@
+# ---------------------------------------------------------------------------
+# Publications.  Every `url` was link-checked (June 2026).
+#   * PeerJ DOIs are valid but Cloudflare-block automated checkers (open fine
+#     in a browser); arXiv mirrors confirm the papers.
+#   * BISS DOIs use the form 10.3897/biss.<vol>.<id>  (NO "e" before the id).
+# To add a paper: copy a block, keep `type` one of the keys in `types`, and
+# paste a BibTeX entry under `bibtex:`.
+# ---------------------------------------------------------------------------
+eyebrow: Publications
+heading: Publications
+sub: Peer-reviewed and scholarly work. Full list on Google Scholar.
+
+# Name highlighted (bolded) in author lists.
+me: "V. K. Kommineni"
+
+# Group order & labels.
+types:
+  - { key: journal,    label: "Peer-reviewed journal articles",        short: "Journal" }
+  - { key: conference, label: "Conference & workshop papers",          short: "Conference" }
+  - { key: preprint,   label: "Preprints",                             short: "Preprints" }
+  - { key: abstract,   label: "Conference abstracts & presentations",  short: "Abstracts" }
+  - { key: poster,     label: "Poster presentations",                  short: "Posters" }
+  - { key: community,  label: "Community & other",                     short: "Community" }
+
+items:
+  # ---- Journal articles ----
+  - id: kommineni-2025-multillm
+    type: journal
+    year: 2025
+    title: "Multi-LLM information retrieval pipeline for extracting deep learning methodologies in biodiversity research"
+    authors: "V. K. Kommineni, B. König-Ries, S. Samuel"
+    venue: "PeerJ Computer Science"
+    meta: "11:e3204"
+    url: "https://doi.org/10.7717/peerj-cs.3204"
+    bibtex: |
+      @article{kommineni2025multillm,
+        author  = {Kommineni, Vamsi Krishna and K{\"o}nig-Ries, Birgitta and Samuel, Sheeba},
+        title   = {Multi-LLM information retrieval pipeline for extracting deep learning methodologies in biodiversity research},
+        journal = {PeerJ Computer Science},
+        volume  = {11},
+        pages   = {e3204},
+        year    = {2025},
+        doi     = {10.7717/peerj-cs.3204}
+      }
+
+  - id: ahmed-2025-reproducibility
+    type: journal
+    year: 2025
+    title: "Evaluating the method reproducibility of deep learning models in biodiversity research"
+    authors: "W. Ahmed, V. K. Kommineni, B. König-Ries, J. Gaikwad, L. Gadelha, S. Samuel"
+    venue: "PeerJ Computer Science"
+    meta: "11:e2618"
+    url: "https://doi.org/10.7717/peerj-cs.2618"
+    bibtex: |
+      @article{ahmed2025reproducibility,
+        author  = {Ahmed, Waqas and Kommineni, Vamsi Krishna and K{\"o}nig-Ries, Birgitta and Gaikwad, J. and Gadelha, L. and Samuel, Sheeba},
+        title   = {Evaluating the method reproducibility of deep learning models in biodiversity research},
+        journal = {PeerJ Computer Science},
+        volume  = {11},
+        pages   = {e2618},
+        year    = {2025},
+        doi     = {10.7717/peerj-cs.2618}
+      }
+
+  - id: kommineni-2021-leafsize
+    type: journal
+    year: 2021
+    title: "Comprehensive leaf size traits dataset for seven plant species from digitised herbarium specimen images covering more than two centuries"
+    authors: "V. K. Kommineni, S. Tautenhahn, P. Baddam, J. Gaikwad, B. Wieczorek, A. Triki, J. Kattge"
+    venue: "Biodiversity Data Journal"
+    meta: "9:e69806"
+    url: "https://doi.org/10.3897/BDJ.9.e69806"
+    bibtex: |
+      @article{kommineni2021leafsize,
+        author  = {Kommineni, Vamsi Krishna and Tautenhahn, S. and Baddam, P. and Gaikwad, J. and Wieczorek, B. and Triki, A. and Kattge, J.},
+        title   = {Comprehensive leaf size traits dataset for seven plant species from digitised herbarium specimen images covering more than two centuries},
+        journal = {Biodiversity Data Journal},
+        volume  = {9},
+        pages   = {e69806},
+        year    = {2021},
+        doi     = {10.3897/BDJ.9.e69806}
+      }
+
+  - id: groom-2023-infrastructure
+    type: journal
+    year: 2023
+    title: "Envisaging a global infrastructure to exploit the potential of digitised collections"
+    authors: "Q. Groom, M. Dillen, W. Addink, et al. (incl. V. K. Kommineni)"
+    venue: "Biodiversity Data Journal"
+    meta: "11:e109439"
+    url: "https://doi.org/10.3897/BDJ.11.e109439"
+    bibtex: |
+      @article{groom2023infrastructure,
+        author  = {Groom, Q. and Dillen, M. and Addink, W. and others},
+        title   = {Envisaging a global infrastructure to exploit the potential of digitised collections},
+        journal = {Biodiversity Data Journal},
+        volume  = {11},
+        pages   = {e109439},
+        year    = {2023},
+        doi     = {10.3897/BDJ.11.e109439}
+      }
+
+  # ---- Conference / workshop ----
+  - id: kommineni-2024-kgc
+    type: conference
+    year: 2024
+    title: "Towards the Automation of Knowledge Graph Construction using Large Language Models"
+    authors: "V. K. Kommineni, B. König-Ries, S. Samuel"
+    venue: "NLP4KGC @ SEMANTiCS"
+    meta: "CEUR-WS Vol-3874 · pp. 19–34"
+    url: "https://ceur-ws.org/Vol-3874/paper2.pdf"
+    bibtex: |
+      @inproceedings{kommineni2024kgconstruction,
+        author    = {Kommineni, Vamsi Krishna and K{\"o}nig-Ries, Birgitta and Samuel, Sheeba},
+        title     = {Towards the Automation of Knowledge Graph Construction using Large Language Models},
+        booktitle = {Proc. Workshop on NLP for Knowledge Graph Construction (NLP4KGC) at SEMANTiCS 2024},
+        series    = {CEUR Workshop Proceedings},
+        volume    = {3874},
+        pages     = {19--34},
+        year      = {2024},
+        url       = {https://ceur-ws.org/Vol-3874/}
+      }
+
+  # ---- Preprints ----
+  - id: kommineni-2024-ontology
+    type: preprint
+    year: 2024
+    title: "From human experts to machines: An LLM supported approach to ontology and knowledge graph construction"
+    authors: "V. K. Kommineni, B. König-Ries, S. Samuel"
+    venue: "arXiv"
+    meta: "arXiv:2403.08345"
+    url: "https://arxiv.org/abs/2403.08345"
+    bibtex: |
+      @article{kommineni2024ontology,
+        author  = {Kommineni, Vamsi Krishna and K{\"o}nig-Ries, Birgitta and Samuel, Sheeba},
+        title   = {From human experts to machines: An {LLM} supported approach to ontology and knowledge graph construction},
+        journal = {arXiv preprint arXiv:2403.08345},
+        year    = {2024},
+        doi     = {10.48550/arXiv.2403.08345}
+      }
+
+  # ---- Abstracts & presentations (TDWG / BISS) ----
+  - id: kommineni-2024-biss-ir
+    type: abstract
+    year: 2024
+    title: "Automating Information Retrieval from Biodiversity Literature Using Large Language Models: A Case Study"
+    authors: "V. K. Kommineni, W. Ahmed, B. König-Ries, S. Samuel"
+    venue: "BISS · TDWG"
+    meta: "8:e136735"
+    url: "https://doi.org/10.3897/biss.8.136735"
+    bibtex: |
+      @article{kommineni2024bissir,
+        author  = {Kommineni, Vamsi Krishna and Ahmed, Waqas and K{\"o}nig-Ries, Birgitta and Samuel, Sheeba},
+        title   = {Automating Information Retrieval from Biodiversity Literature Using Large Language Models: A Case Study},
+        journal = {Biodiversity Information Science and Standards},
+        volume  = {8},
+        pages   = {e136735},
+        year    = {2024},
+        doi     = {10.3897/biss.8.136735}
+      }
+
+  - id: kommineni-2023-clip
+    type: abstract
+    year: 2023
+    title: "The Role of the CLIP Model in Analysing Herbarium Specimen Images"
+    authors: "V. K. Kommineni, J. Kattge, J. Gaikwad, S. Tautenhahn, B. König-Ries"
+    venue: "BISS · TDWG"
+    meta: "7:e112566"
+    url: "https://doi.org/10.3897/biss.7.112566"
+    bibtex: |
+      @article{kommineni2023clip,
+        author  = {Kommineni, Vamsi Krishna and Kattge, J. and Gaikwad, J. and Tautenhahn, S. and K{\"o}nig-Ries, Birgitta},
+        title   = {The Role of the CLIP Model in Analysing Herbarium Specimen Images},
+        journal = {Biodiversity Information Science and Standards},
+        volume  = {7},
+        pages   = {e112566},
+        year    = {2023},
+        doi     = {10.3897/biss.7.112566}
+      }
+
+  - id: ahmed-2023-biss-repro
+    type: abstract
+    year: 2023
+    title: "How Reproducible are the Results Gained with the Help of Deep Learning Methods in Biodiversity Research?"
+    authors: "W. Ahmed, V. K. Kommineni, B. König-Ries, S. Samuel"
+    venue: "BISS · TDWG"
+    meta: "7:e112698"
+    url: "https://doi.org/10.3897/biss.7.112698"
+    bibtex: |
+      @article{ahmed2023bissrepro,
+        author  = {Ahmed, Waqas and Kommineni, Vamsi Krishna and K{\"o}nig-Ries, Birgitta and Samuel, Sheeba},
+        title   = {How Reproducible are the Results Gained with the Help of Deep Learning Methods in Biodiversity Research?},
+        journal = {Biodiversity Information Science and Standards},
+        volume  = {7},
+        pages   = {e112698},
+        year    = {2023},
+        doi     = {10.3897/biss.7.112698}
+      }
+
+  - id: kommineni-2023-gfoe-leaves
+    type: abstract
+    year: 2023
+    title: "Identification of digital herbarium sheets containing specimens with intact leaves and a measurable scale"
+    authors: "V. K. Kommineni"
+    venue: "GfÖ"
+    meta: "abstract"
+    # No DOI/stable link is published for this GfÖ conference abstract.
+    bibtex: |
+      @misc{kommineni2023gfoeleaves,
+        author = {Kommineni, Vamsi Krishna},
+        title  = {Identification of digital herbarium sheets containing specimens with intact leaves and a measurable scale},
+        year   = {2023},
+        note   = {Abstract, Gesellschaft f{\"u}r {\"O}kologie (Gf{\"O}) Annual Meeting}
+      }
+
+  - id: kommineni-2020-intraspecific
+    type: abstract
+    year: 2020
+    title: "Understanding Intraspecific Trait Variability Using Digital Herbarium Specimen Images"
+    authors: "V. K. Kommineni, J. Kattge, J. Gaikwad, P. Baddam, S. Tautenhahn"
+    venue: "BISS · TDWG"
+    meta: "4:e59061"
+    url: "https://doi.org/10.3897/biss.4.59061"
+    bibtex: |
+      @article{kommineni2020intraspecific,
+        author  = {Kommineni, Vamsi Krishna and Kattge, J. and Gaikwad, J. and Baddam, P. and Tautenhahn, S.},
+        title   = {Understanding Intraspecific Trait Variability Using Digital Herbarium Specimen Images},
+        journal = {Biodiversity Information Science and Standards},
+        volume  = {4},
+        pages   = {e59061},
+        year    = {2020},
+        doi     = {10.3897/biss.4.59061}
+      }
+
+  # ---- Poster presentations ----
+  - id: kommineni-2024-poster-reproducibility
+    type: poster
+    year: 2024
+    title: "Reproducibility of Deep Learning pipeline method information using a Multi-modality approach"
+    authors: "V. K. Kommineni, W. Ahmed, B. König-Ries, S. Samuel"
+    venue: "Frühjahrstreffen der FG Datenbanken"
+    meta: "poster"
+    url: "https://indico.rz.uni-jena.de/event/100/contributions/658/"
+    bibtex: |
+      @misc{kommineni2024reproposter,
+        author       = {Kommineni, Vamsi Krishna and Ahmed, Waqas and K{\"o}nig-Ries, Birgitta and Samuel, Sheeba},
+        title        = {Reproducibility of Deep Learning pipeline method information using a Multi-modality approach},
+        year         = {2024},
+        note         = {Poster, Fr{\"u}hjahrstreffen der FG Datenbanken},
+        howpublished = {\url{https://indico.rz.uni-jena.de/event/100/contributions/658/}}
+      }
+
+  - id: kommineni-2024-poster-kg
+    type: poster
+    year: 2024
+    title: "Revisiting the process of Knowledge Graph generation with the integration of LLMs"
+    authors: "V. K. Kommineni, S. Samuel, B. König-Ries"
+    venue: "Frühjahrstreffen der FG Datenbanken"
+    meta: "poster"
+    url: "https://indico.rz.uni-jena.de/event/100/contributions/665/"
+    bibtex: |
+      @misc{kommineni2024kgposter,
+        author       = {Kommineni, Vamsi Krishna and Samuel, Sheeba and K{\"o}nig-Ries, Birgitta},
+        title        = {Revisiting the process of Knowledge Graph generation with the integration of LLMs},
+        year         = {2024},
+        note         = {Poster, Fr{\"u}hjahrstreffen der FG Datenbanken},
+        howpublished = {\url{https://indico.rz.uni-jena.de/event/100/contributions/665/}}
+      }
+
+  # ---- Community & other ----
+  - id: dsouza-2025-ecohack
+    type: community
+    year: 2025
+    title: "Reflections from the 2025 EcoHack: AI & LLM Hackathon for Applications in Evidence-based Ecological Research & Practice"
+    authors: "J. D'Souza, T. Al Mustafa, D. F. Auer, et al. (incl. V. K. Kommineni)"
+    venue: "EcoEvoRxiv"
+    meta: "preprint"
+    url: "https://doi.org/10.32942/x2xp7j"
+    bibtex: |
+      @article{dsouza2025ecohack,
+        author  = {D'Souza, J. and Al Mustafa, T. and Auer, D. F. and others},
+        title   = {Reflections from the 2025 EcoHack: AI \& LLM Hackathon for Applications in Evidence-based Ecological Research \& Practice},
+        journal = {EcoEvoRxiv},
+        year    = {2025},
+        doi     = {10.32942/x2xp7j}
+      }

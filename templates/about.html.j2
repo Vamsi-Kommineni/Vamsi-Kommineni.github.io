@@ -1,0 +1,36 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="view">
+  <span class="eyebrow">{{ about.eyebrow }}</span>
+  <h1 class="page-title">{{ about.heading }}</h1>
+  <p class="sub">{{ about.sub }}</p>
+
+  <div class="about-grid">
+    <div class="prose">
+      {% for p in about.bio %}<p>{{ p | mdinline }}</p>{% endfor %}
+    </div>
+    <div class="kg" aria-hidden="true">
+      <svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+        {%- for nd in kg.nodes %}<line x1="50" y1="50" x2="{{ nd.x }}" y2="{{ nd.y }}"/>{% endfor %}
+      </svg>
+      {%- for nd in kg.nodes %}
+      <span class="nd" style="left:{{ nd.x }}%;top:{{ nd.y }}%">{{ nd.label }}</span>
+      {%- endfor %}
+      <span class="core">{{ kg.core }}</span>
+    </div>
+  </div>
+
+  <ul class="highlights">
+    {%- for h in about.highlights %}
+    <li class="chip"><b>{{ h.label }}</b> {{ h.note }}</li>
+    {%- endfor %}
+  </ul>
+
+  <h2 class="block-h">Timeline</h2>
+  <ul class="news">
+    {%- for n in news %}
+    <li><span class="when{% if n.upcoming %} up{% endif %}">{{ n.date }}</span><p>{{ n.text | mdinline }}</p></li>
+    {%- endfor %}
+  </ul>
+</section>
+{% endblock %}

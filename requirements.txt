@@ -1,0 +1,5 @@
+Jinja2>=3.1,<4
+PyYAML>=6.0
+Markdown>=3.4
+# MarkupSafe ships with Jinja2. Pillow is only needed to regenerate images
+# (gen_assets.py); it is intentionally NOT required for the site build.

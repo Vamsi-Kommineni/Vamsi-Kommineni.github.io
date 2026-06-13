@@ -1,0 +1,65 @@
+# Talks & outreach page.
+eyebrow: Talks & outreach
+heading: Talks & outreach
+sub: Conference presentations, organized sessions, supervision, and community work.
+
+# Organized scientific sessions.
+organized:
+  - tag: TDWG · 2022
+    text: >-
+      Co-organised session SYM12, "Information extraction from digital specimen images
+      using Artificial Intelligence," at TDWG 2022.
+  - tag: GfÖ · 2023
+    text: Co-organised the "AI for collection images" session at GfÖ (Gesellschaft für Ökologie).
+
+# Conference presentations (newest first).
+presentations:
+  - year: "2024"
+    title: Towards the automation of knowledge-graph construction using LLMs
+    where: SEMANTiCS · NLP4KGC
+  - year: "2024"
+    title: Automating information retrieval from biodiversity literature using LLMs
+    where: TDWG / BISS
+  - year: "2023"
+    title: The role of the CLIP model in analysing herbarium specimen images
+    where: TDWG / BISS
+  - year: "2023"
+    title: Identification of digital herbarium sheets containing specimens with intact leaves and a measurable scale
+    where: GfÖ
+  - year: "2020"
+    title: Understanding intraspecific trait variability using digital herbarium specimen images
+    where: TDWG / BISS
+
+# Poster presentations.
+posters:
+  - year: "2024"
+    title: Reproducibility of Deep Learning pipeline method information using a Multi-modality approach
+    where: Frühjahrstreffen der FG Datenbanken
+  - year: "2024"
+    title: Revisiting the process of Knowledge Graph generation with the integration of LLMs
+    where: Frühjahrstreffen der FG Datenbanken
+
+# Peer review service.
+reviewing:
+  - role: Co-reviewer
+    venue: "Extended Semantic Web Conference (ESWC)"
+    years: "2024"
+    note: Knowledge graphs, ontologies, and web semantics.
+  - role: Journal reviewer
+    venue: "Plant Methods (Springer Nature) and Flora (Elsevier)"
+    years: "2024–present"
+    note: Computer-vision frameworks, data pipelines, and ML models for biological systems.
+
+# Thesis supervision (co-supervised).
+supervision:
+  - level: Master's thesis
+    student: Murad Ali
+    title: Document Question Answering using Large Language Models
+  - level: Bachelor's thesis
+    student: Richard Hofmann
+    title: Erstellung einer Ontologie für Wasserqualität mit Hilfe von Large Language Models
+
+# Community.
+community:
+  - year: "2025"
+    text: "Participant, EcoHack: AI & LLM Hackathon for evidence-based ecological research."
